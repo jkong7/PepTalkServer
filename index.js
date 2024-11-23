@@ -36,6 +36,11 @@ app.use('/api/recap', recapRoutes);
 
 app.get('/', (req, res) => res.send('PepTalk Backend Running'));
 
+app.get('/api/entry/entry-data', (req, res) => {
+    res.json({ message: 'Temporary test route working!' });
+});
+
+
 app.listen(process.env.PORT, () => {
     connectDB();
     console.log('Server is running on port', process.env.PORT);
