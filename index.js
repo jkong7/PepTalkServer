@@ -10,8 +10,8 @@ dotenv.config();
 const app = express();
 
 const allowedOrigins = [
-    'https://peptalk-navy.web.app',
-    'http://localhost:5173' // For local testing
+    'https://peptalk-navy.web.app', // Firebase hosted app
+    'http://localhost:5173', // Local development
 ];
 
 const corsOptions = {
@@ -26,6 +26,7 @@ const corsOptions = {
 };
 
 app.use(cors(corsOptions));
+
 
 app.use(express.json());
 
