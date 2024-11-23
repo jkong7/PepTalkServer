@@ -30,13 +30,13 @@ app.use(cors(corsOptions));
 
 app.use(express.json());
 
-app.use('/api/auth', authRoutes);
-app.use('/api/entry', entryRoutes);
-app.use('/api/recap', recapRoutes);
+app.use('/backend/auth', authRoutes);
+app.use('/backend/entry', entryRoutes);
+app.use('/backend/recap', recapRoutes);
 
 app.get('/', (req, res) => res.send('PepTalk Backend Running'));
 
-app.get('/api/entry/entry-data', (req, res) => {
+app.get('/backend/entry/entry-data', (req, res) => {
     res.json({ message: 'Temporary test route working!' });
 });
 
